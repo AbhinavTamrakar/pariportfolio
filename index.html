@@ -745,11 +745,352 @@
     section { padding: 60px; }
   }
 
-  @media (max-width: 700px) {
-    .hero, section, .cta-section, footer { padding: 48px 28px; }
-    .two-col { grid-template-columns: 1fr; }
-    .cal-grid { grid-template-columns: repeat(4, 1fr); }
-    .cal-day-header:nth-child(n+6), .cal-day:nth-child(7n+6), .cal-day:nth-child(7n) { display: none; }
+  /* ── RESPONSIVE: TABLET (≤900px) ── */
+  @media (max-width: 900px) {
+    .hero {
+      padding: 60px 36px;
+    }
+
+    section {
+      padding: 60px 36px;
+    }
+
+    .cta-section,
+    footer {
+      padding: 60px 36px;
+    }
+
+    .two-col {
+      grid-template-columns: 1fr;
+    }
+
+    .gap-grid {
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .hero::after {
+      font-size: 260px;
+      bottom: -40px;
+      right: -10px;
+    }
+
+    .cta-section::before {
+      font-size: 72px;
+    }
+
+    .kpi-table {
+      display: block;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      white-space: nowrap;
+    }
+
+    .season-tabs {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .season-tab {
+      white-space: nowrap;
+    }
+  }
+
+  /* ── RESPONSIVE: MOBILE (≤600px) ── */
+  @media (max-width: 600px) {
+    .hero {
+      padding: 48px 20px 56px;
+      min-height: auto;
+    }
+
+    section {
+      padding: 48px 20px;
+    }
+
+    .cta-section {
+      padding: 56px 20px;
+    }
+
+    footer {
+      padding: 28px 20px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    /* Hero tweaks */
+    .hero::after {
+      font-size: 160px;
+      bottom: -20px;
+      right: -5px;
+    }
+
+    .hero-tag {
+      font-size: 10px;
+      letter-spacing: 0.12em;
+    }
+
+    .hero h1 {
+      font-size: clamp(52px, 15vw, 72px);
+    }
+
+    .hero-sub {
+      font-size: 14px;
+      margin-top: 20px;
+    }
+
+    .hero-meta {
+      gap: 24px;
+      margin-top: 36px;
+    }
+
+    .hero-meta-item .val {
+      font-size: 28px;
+    }
+
+    .hero-badge {
+      font-size: 11px;
+      padding: 7px 14px;
+      margin-top: 32px;
+    }
+
+    /* Section labels & titles */
+    .section-label {
+      font-size: 9px;
+      letter-spacing: 0.18em;
+      margin-bottom: 28px;
+    }
+
+    .section-title {
+      font-size: clamp(32px, 9vw, 48px);
+      margin-bottom: 32px;
+    }
+
+    /* Gap audit */
+    .gap-grid {
+      grid-template-columns: 1fr;
+      gap: 2px;
+    }
+
+    .gap-card {
+      padding: 22px 20px 18px 24px;
+    }
+
+    .gap-card h3 {
+      font-size: 15px;
+    }
+
+    .stats-row {
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    .stat-box {
+      padding: 18px 14px;
+    }
+
+    .stat-box .num {
+      font-size: 34px;
+    }
+
+    /* Platform bars */
+    .pb-label {
+      width: 70px;
+      font-size: 10px;
+    }
+
+    .pb-val {
+      font-size: 10px;
+      width: 44px;
+    }
+
+    /* Strategy phases */
+    .phase-header {
+      gap: 16px;
+    }
+
+    .phase-num {
+      font-size: 56px;
+      width: 52px;
+    }
+
+    .phase-info h3 {
+      font-size: 22px;
+    }
+
+    .action-list {
+      grid-template-columns: 1fr;
+    }
+
+    .action-item {
+      padding: 14px 16px;
+    }
+
+    /* Content calendar */
+    .season-tabs {
+      gap: 0;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 2px;
+    }
+
+    .season-tab {
+      padding: 12px 18px;
+      font-size: 11px;
+      white-space: nowrap;
+    }
+
+    .cal-grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 4px;
+    }
+
+    /* Hide Sat & Sun columns on mobile */
+    .cal-day-header:nth-child(7),
+    .cal-day-header:nth-child(1),
+    .cal-day:nth-child(7n+1),
+    .cal-day:nth-child(7n) {
+      display: none;
+    }
+
+    .cal-day {
+      min-height: 70px;
+      padding: 8px 6px;
+    }
+
+    /* Season cards */
+    .two-col {
+      grid-template-columns: 1fr;
+    }
+
+    .season-card {
+      padding: 24px 20px;
+    }
+
+    .season-card h3 {
+      font-size: 24px;
+    }
+
+    .ct-item {
+      padding: 10px 12px;
+      gap: 10px;
+    }
+
+    .ct-icon {
+      width: 28px;
+      height: 28px;
+      font-size: 13px;
+    }
+
+    /* KPI table — scrollable on mobile */
+    .kpis {
+      padding-bottom: 48px;
+    }
+
+    .kpi-table-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      border-radius: 4px;
+    }
+
+    .kpi-table {
+      min-width: 560px;
+    }
+
+    .kpi-table th {
+      padding: 8px 14px;
+      font-size: 9px;
+    }
+
+    .kpi-table td {
+      padding: 12px 14px;
+      font-size: 12px;
+    }
+
+    /* Skills grid */
+    .skills-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+    }
+
+    .skill-item {
+      padding: 20px 16px;
+    }
+
+    .skill-item .sk-icon {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .skill-item h4 {
+      font-size: 13px;
+    }
+
+    .skill-item p {
+      font-size: 11px;
+    }
+
+    /* Experience quote block */
+    div[style*="padding:32px"] {
+      padding: 24px 18px !important;
+    }
+
+    /* CTA section */
+    .cta-section h2 {
+      font-size: clamp(32px, 9vw, 48px);
+    }
+
+    .cta-section::before {
+      font-size: 44px;
+      white-space: normal;
+      text-align: center;
+    }
+
+    .contact-pills {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .contact-pill {
+      font-size: 12px;
+      padding: 10px 18px;
+      width: 100%;
+      max-width: 280px;
+      justify-content: center;
+    }
+  }
+
+  /* ── RESPONSIVE: SMALL MOBILE (≤380px) ── */
+  @media (max-width: 380px) {
+    .hero {
+      padding: 40px 16px 48px;
+    }
+
+    section {
+      padding: 40px 16px;
+    }
+
+    .cta-section,
+    footer {
+      padding: 40px 16px;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+    }
+
+    .skills-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .stats-row {
+      grid-template-columns: 1fr;
+    }
+
+    .hero-meta {
+      gap: 20px;
+    }
   }
 </style>
 </head>
@@ -1160,6 +1501,7 @@
   <div class="section-label">Section 05 — Targets & KPIs</div>
   <div class="section-title">How I Will Measure<br>Success</div>
 
+  <div class="kpi-table-wrap">
   <table class="kpi-table">
     <thead>
       <tr>
@@ -1229,6 +1571,7 @@
       </tr>
     </tbody>
   </table>
+  </div>
 </section>
 
 <!-- ══════════════ WHY ME ══════════════ -->
