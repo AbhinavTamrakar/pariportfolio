@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parikshit Bhandari — Digital Marketing Specialist | Kathmandu Gorkhas</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #F5C518;
+    --purple: #4B2D8F;
+    --purple-dark: #2E1A5C;
+    --purple-mid: #6B3FA0;
+    --white: #FAFAF8;
+    --offwhite: #F0EDE6;
+    --dark: #0E0B18;
+    --mid: #1C1630;
+    --muted: #8B85A0;
+    --accent-teal: #00C9A7;
+    --red: #E84040;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--dark);
+    color: var(--white);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background: var(--purple-dark);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 60px;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -200px; right: -200px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(245,197,24,0.18) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero::after {
+    content: 'KG';
+    position: absolute;
+    bottom: -60px; right: -20px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 420px;
+    color: rgba(255,255,255,0.03);
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .hero-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .hero-tag::before {
+    content: '';
+    display: block;
+    width: 32px; height: 1px;
+    background: var(--gold);
+  }
+
+  .hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(56px, 9vw, 110px);
+    line-height: 0.92;
+    color: var(--white);
+    margin-bottom: 12px;
+    letter-spacing: 0.01em;
+  }
+
+  .hero h1 span {
+    color: var(--gold);
+    display: block;
+  }
+
+  .hero-sub {
+    font-size: 16px;
+    color: rgba(255,255,255,0.55);
+    max-width: 520px;
+    margin-top: 28px;
+    line-height: 1.8;
+  }
+
+  .hero-meta {
+    display: flex;
+    gap: 40px;
+    margin-top: 48px;
+    flex-wrap: wrap;
+  }
+
+  .hero-meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .hero-meta-item .val {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    color: var(--gold);
+    line-height: 1;
+  }
+
+  .hero-meta-item .lbl {
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(245,197,24,0.12);
+    border: 1px solid rgba(245,197,24,0.3);
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 100px;
+    margin-top: 40px;
+    width: fit-content;
+  }
+
+  .dot {
+    width: 6px; height: 6px;
+    background: var(--gold);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.7); }
+  }
+
+  /* ── SECTION BASE ── */
+  section {
+    padding: 80px 60px;
+  }
+
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(255,255,255,0.08);
+  }
+
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(38px, 5vw, 62px);
+    line-height: 1;
+    margin-bottom: 48px;
+    color: var(--white);
+    letter-spacing: 0.01em;
+  }
+
+  /* ── GAP AUDIT ── */
+  .audit {
+    background: var(--mid);
+  }
+
+  .gap-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2px;
+    margin-bottom: 48px;
+  }
+
+  .gap-card {
+    background: rgba(255,255,255,0.03);
+    padding: 28px 28px 24px;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.2s;
+  }
+
+  .gap-card:hover { background: rgba(255,255,255,0.06); }
+
+  .gap-card .severity {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .sev-critical { color: var(--red); }
+  .sev-high { color: var(--gold); }
+  .sev-medium { color: #F5A623; }
+
+  .gap-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--white);
+  }
+
+  .gap-card p {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  .gap-card .sev-bar {
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+  }
+
+  .bar-critical { background: var(--red); }
+  .bar-high { background: var(--gold); }
+  .bar-medium { background: #F5A623; }
+
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-top: 40px;
+  }
+
+  .stat-box {
+    background: rgba(245,197,24,0.06);
+    border: 1px solid rgba(245,197,24,0.15);
+    padding: 24px 20px;
+    border-radius: 4px;
+  }
+
+  .stat-box .num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 44px;
+    color: var(--gold);
+    line-height: 1;
+    display: block;
+  }
+
+  .stat-box .desc {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 6px;
+    line-height: 1.5;
+  }
+
+  /* ── STRATEGY ── */
+  .strategy { background: var(--dark); }
+
+  .phase-block {
+    margin-bottom: 56px;
+  }
+
+  .phase-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+
+  .phase-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 80px;
+    line-height: 0.85;
+    color: rgba(255,255,255,0.06);
+    flex-shrink: 0;
+    width: 72px;
+  }
+
+  .phase-info h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    color: var(--gold);
+    letter-spacing: 0.04em;
+    margin-bottom: 4px;
+  }
+
+  .phase-info p {
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  .action-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 12px;
+  }
+
+  .action-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px 18px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 4px;
+    border-left: 2px solid transparent;
+    transition: all 0.2s;
+  }
+
+  .action-item:hover {
+    background: rgba(255,255,255,0.06);
+    border-left-color: var(--gold);
+  }
+
+  .action-icon {
+    font-size: 18px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .action-item .action-text {
+    font-size: 13px;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.6;
+  }
+
+  .action-item .action-text strong {
+    display: block;
+    color: var(--white);
+    font-weight: 600;
+    margin-bottom: 2px;
+    font-size: 14px;
+  }
+
+  /* ── CONTENT CALENDAR ── */
+  .calendar { background: var(--mid); }
+
+  .season-tabs {
+    display: flex;
+    gap: 0;
+    margin-bottom: 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .season-tab {
+    padding: 14px 28px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    transition: all 0.2s;
+    color: var(--muted);
+  }
+
+  .season-tab.active {
+    color: var(--gold);
+    border-bottom-color: var(--gold);
+  }
+
+  .cal-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+  }
+
+  .cal-day-header {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    text-align: center;
+    padding: 8px 4px;
+    text-transform: uppercase;
+  }
+
+  .cal-day {
+    background: rgba(255,255,255,0.03);
+    border-radius: 4px;
+    padding: 10px 8px;
+    min-height: 90px;
+    position: relative;
+    font-size: 11px;
+  }
+
+  .cal-day .day-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+
+  .cal-pill {
+    display: block;
+    font-size: 10px;
+    padding: 3px 6px;
+    border-radius: 2px;
+    margin-bottom: 4px;
+    line-height: 1.3;
+    font-weight: 500;
+  }
+
+  .pill-ig { background: rgba(225,48,108,0.2); color: #F060A0; }
+  .pill-yt { background: rgba(255,0,0,0.15); color: #FF6060; }
+  .pill-tt { background: rgba(0,201,167,0.15); color: var(--accent-teal); }
+  .pill-fb { background: rgba(66,103,178,0.2); color: #7090E0; }
+  .pill-all { background: rgba(245,197,24,0.15); color: var(--gold); }
+
+  /* ── ON vs OFF SEASON ── */
+  .seasons { background: var(--dark); }
+
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .season-card {
+    padding: 36px;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .on-season {
+    background: linear-gradient(135deg, #2E1A5C 0%, #1C1630 100%);
+    border: 1px solid rgba(245,197,24,0.2);
+  }
+
+  .off-season {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .season-card h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 30px;
+    letter-spacing: 0.04em;
+    margin-bottom: 6px;
+  }
+
+  .on-season h3 { color: var(--gold); }
+  .off-season h3 { color: var(--accent-teal); }
+
+  .season-card .period {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    margin-bottom: 28px;
+    color: var(--muted);
+  }
+
+  .content-type-row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .ct-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 14px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 4px;
+  }
+
+  .ct-icon {
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+
+  .ct-gold { background: rgba(245,197,24,0.15); }
+  .ct-teal { background: rgba(0,201,167,0.15); }
+  .ct-red { background: rgba(232,64,64,0.15); }
+  .ct-purple { background: rgba(107,63,160,0.15); }
+
+  .ct-item .ct-text { font-size: 13px; color: rgba(255,255,255,0.8); }
+  .ct-item .ct-text strong { display: block; font-size: 13px; color: var(--white); margin-bottom: 1px; }
+  .ct-item .ct-sub { font-size: 11px; color: var(--muted); }
+
+  /* ── KPI ── */
+  .kpis { background: var(--mid); }
+
+  .kpi-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 6px;
+  }
+
+  .kpi-table th {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: left;
+    padding: 8px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .kpi-table td {
+    padding: 14px 20px;
+    font-size: 13px;
+    background: rgba(255,255,255,0.03);
+    color: rgba(255,255,255,0.8);
+    vertical-align: top;
+  }
+
+  .kpi-table tr td:first-child {
+    border-radius: 4px 0 0 4px;
+    font-weight: 600;
+    color: var(--white);
+  }
+
+  .kpi-table tr td:last-child {
+    border-radius: 0 4px 4px 0;
+  }
+
+  .kpi-tag {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 100px;
+    font-size: 11px;
+    font-weight: 600;
+  }
+
+  .kpi-win { background: rgba(0,201,167,0.15); color: var(--accent-teal); }
+  .kpi-watch { background: rgba(245,197,24,0.15); color: var(--gold); }
+
+  /* ── WHY ME ── */
+  .why-me { background: var(--purple-dark); }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2px;
+    margin-bottom: 48px;
+  }
+
+  .skill-item {
+    padding: 28px 24px;
+    background: rgba(255,255,255,0.04);
+    transition: background 0.2s;
+  }
+
+  .skill-item:hover { background: rgba(255,255,255,0.08); }
+
+  .skill-item .sk-icon {
+    font-size: 24px;
+    margin-bottom: 14px;
+    display: block;
+  }
+
+  .skill-item h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+
+  .skill-item p {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  /* ── CTA ── */
+  .cta-section {
+    background: var(--gold);
+    padding: 80px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-section::before {
+    content: 'AAYO GORKHALI';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 120px;
+    color: rgba(0,0,0,0.07);
+    white-space: nowrap;
+    pointer-events: none;
+  }
+
+  .cta-section h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 56px;
+    color: var(--dark);
+    line-height: 1;
+    margin-bottom: 16px;
+    position: relative;
+  }
+
+  .cta-section p {
+    font-size: 15px;
+    color: rgba(0,0,0,0.6);
+    max-width: 480px;
+    margin: 0 auto 36px;
+    position: relative;
+  }
+
+  .contact-pills {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .contact-pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--dark);
+    color: var(--gold);
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--dark);
+    padding: 32px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  footer .foot-left {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+  }
+
+  footer .foot-right {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+  }
+
+  /* ── DIVIDER ── */
+  .divider-line {
+    height: 1px;
+    background: rgba(255,255,255,0.06);
+    margin: 48px 0;
+  }
+
+  /* ── PLATFORM BAR ── */
+  .platform-bars { margin-top: 40px; }
+
+  .pb-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 14px;
+  }
+
+  .pb-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    width: 90px;
+    flex-shrink: 0;
+    text-align: right;
+  }
+
+  .pb-bar-wrap {
+    flex: 1;
+    height: 6px;
+    background: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .pb-fill {
+    height: 100%;
+    border-radius: 3px;
+    background: var(--gold);
+    position: relative;
+  }
+
+  .pb-fill.low { background: var(--red); }
+  .pb-fill.mid { background: #F5A623; }
+  .pb-fill.good { background: var(--accent-teal); }
+
+  .pb-val {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--white);
+    width: 50px;
+    flex-shrink: 0;
+  }
+
+  @media print {
+    body { background: white; color: #111; }
+    .hero { min-height: auto; padding: 60px; }
+    section { padding: 60px; }
+  }
+
+  @media (max-width: 700px) {
+    .hero, section, .cta-section, footer { padding: 48px 28px; }
+    .two-col { grid-template-columns: 1fr; }
+    .cal-grid { grid-template-columns: repeat(4, 1fr); }
+    .cal-day-header:nth-child(n+6), .cal-day:nth-child(7n+6), .cal-day:nth-child(7n) { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════════ HERO ══════════════ -->
+<section class="hero">
+  <div class="hero-tag">Digital Marketing Portfolio · Kathmandu Gorkhas · May 2026</div>
+  <h1>
+    Parikshit
+    <span>Bhandari</span>
+  </h1>
+  <p class="hero-sub">
+    A data-backed audit of where Kathmandu Gorkhas stands digitally today, a clear strategy for what comes next, and proof that I am the person to execute it.
+  </p>
+  <div class="hero-meta">
+    <div class="hero-meta-item">
+      <span class="val">3+</span>
+      <span class="lbl">Years in Social Media</span>
+    </div>
+    <div class="hero-meta-item">
+      <span class="val">2</span>
+      <span class="lbl">Sports Brands Managed</span>
+    </div>
+    <div class="hero-meta-item">
+      <span class="val">5</span>
+      <span class="lbl">Platforms Covered</span>
+    </div>
+    <div class="hero-meta-item">
+      <span class="val">Day 1</span>
+      <span class="lbl">Available to Join</span>
+    </div>
+  </div>
+  <div class="hero-badge">
+    <span class="dot"></span>
+    Applying for: Digital Marketing Specialist
+  </div>
+</section>
+
+<!-- ══════════════ GAP AUDIT ══════════════ -->
+<section class="audit">
+  <div class="section-label">Section 01 — Digital Audit</div>
+  <div class="section-title">What Gorkhas<br>Is Missing Right Now</div>
+
+  <div class="gap-grid">
+    <div class="gap-card">
+      <div class="sev-bar bar-critical"></div>
+      <div class="severity sev-critical">⬤ CRITICAL</div>
+      <h3>Inactive Website</h3>
+      <p>No official hub means no merch sales, no fan registration, no SEO, and no credibility with sponsors. 6 out of 8 NPL teams have active websites. Gorkhas and Lumbini are the only two without.</p>
+    </div>
+    <div class="gap-card">
+      <div class="sev-bar bar-critical"></div>
+      <div class="severity sev-critical">⬤ CRITICAL</div>
+      <h3>No YouTube Strategy</h3>
+      <p>Nepal has 8.2 million YouTube users — the #2 platform in the country. The channel exists but functions as a passive video dump with no SEO, no playlists, no upload cadence, and no subscriber growth plan.</p>
+    </div>
+    <div class="gap-card">
+      <div class="sev-bar bar-high"></div>
+      <div class="severity sev-high">⬤ HIGH</div>
+      <h3>10 Months of Silence</h3>
+      <p>NPL runs Nov–Dec. For the remaining 10 months, social media activity drops to near zero. Fans who join during the season have no reason to stay engaged, so you rebuild from scratch every year.</p>
+    </div>
+    <div class="gap-card">
+      <div class="sev-bar bar-high"></div>
+      <div class="severity sev-high">⬤ HIGH</div>
+      <h3>Instagram Behind Competitors</h3>
+      <p>Chitwan Rhinos have 14K+ Instagram followers vs Gorkhas' 11K — despite Gorkhas representing Nepal's capital and being backed by Kantipur Publications, one of Nepal's biggest media houses.</p>
+    </div>
+    <div class="gap-card">
+      <div class="sev-bar bar-high"></div>
+      <div class="severity sev-high">⬤ HIGH</div>
+      <h3>Zero Merch & E-Commerce</h3>
+      <p>58,000+ Facebook fans and no jersey store. No limited edition drops. No online merchandise funnel at all. This is direct revenue left uncollected every single day.</p>
+    </div>
+    <div class="gap-card">
+      <div class="sev-bar bar-medium"></div>
+      <div class="severity sev-medium">⬤ MEDIUM</div>
+      <h3>Duplicate Account Confusion</h3>
+      <p>An old @kathmandugurkhas account (1,232 followers) still exists alongside the main @ktmgorkhas. This splits brand traffic, confuses fans, and dilutes search presence.</p>
+    </div>
+    <div class="gap-card">
+      <div class="sev-bar bar-medium"></div>
+      <div class="severity sev-medium">⬤ MEDIUM</div>
+      <h3>Karan KC Underutilised</h3>
+      <p>The marquee player has a built-in fanbase but is not being used as a content engine. No dedicated player content series, no personal brand integration, no crossover fan capture.</p>
+    </div>
+    <div class="gap-card">
+      <div class="sev-bar bar-medium"></div>
+      <div class="severity sev-medium">⬤ MEDIUM</div>
+      <h3>Kantipur Media Advantage Unused</h3>
+      <p>Gorkhas is owned by Kantipur Publications — the same group that runs The Kathmandu Post, Kantipur TV, and radio. This cross-promotion infrastructure is almost entirely untapped.</p>
+    </div>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-box">
+      <span class="num">8.2M</span>
+      <div class="desc">YouTube users in Nepal — the biggest untapped audience for Gorkhas content</div>
+    </div>
+    <div class="stat-box">
+      <span class="num">6/8</span>
+      <div class="desc">NPL teams with active merch websites. Gorkhas are not one of them.</div>
+    </div>
+    <div class="stat-box">
+      <span class="num">10mo</span>
+      <div class="desc">Months per year with near-zero content output and fan retention</div>
+    </div>
+    <div class="stat-box">
+      <span class="num">14K</span>
+      <div class="desc">Chitwan Rhinos' Instagram followers — 3,000 ahead of Gorkhas despite smaller market</div>
+    </div>
+  </div>
+
+  <div class="platform-bars">
+    <div class="section-label" style="margin-top:40px;">Current platform strength score</div>
+    <div class="pb-row">
+      <div class="pb-label">Facebook</div>
+      <div class="pb-bar-wrap"><div class="pb-fill good" style="width:70%"></div></div>
+      <div class="pb-val">58K ✓</div>
+    </div>
+    <div class="pb-row">
+      <div class="pb-label">Instagram</div>
+      <div class="pb-bar-wrap"><div class="pb-fill mid" style="width:45%"></div></div>
+      <div class="pb-val">11K ~</div>
+    </div>
+    <div class="pb-row">
+      <div class="pb-label">TikTok</div>
+      <div class="pb-bar-wrap"><div class="pb-fill mid" style="width:35%"></div></div>
+      <div class="pb-val">9.3K ~</div>
+    </div>
+    <div class="pb-row">
+      <div class="pb-label">YouTube</div>
+      <div class="pb-bar-wrap"><div class="pb-fill low" style="width:15%"></div></div>
+      <div class="pb-val">Low ✗</div>
+    </div>
+    <div class="pb-row">
+      <div class="pb-label">Website</div>
+      <div class="pb-bar-wrap"><div class="pb-fill low" style="width:5%"></div></div>
+      <div class="pb-val">None ✗</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 90-DAY STRATEGY ══════════════ -->
+<section class="strategy">
+  <div class="section-label">Section 02 — Action Plan</div>
+  <div class="section-title">What I Will Do,<br>Day by Day</div>
+
+  <div class="phase-block">
+    <div class="phase-header">
+      <div class="phase-num">01</div>
+      <div class="phase-info">
+        <h3>Week 1–2 · Emergency Fixes</h3>
+        <p>Plug the critical leaks before anything else. These are zero-cost, high-impact first moves.</p>
+      </div>
+    </div>
+    <div class="action-list">
+      <div class="action-item">
+        <div class="action-icon">🌐</div>
+        <div class="action-text"><strong>Relaunch the website</strong>Squad page, fixtures, fan sign-up, basic merch store live within 14 days.</div>
+      </div>
+      <div class="action-item">
+        <div class="action-icon">📱</div>
+        <div class="action-text"><strong>Consolidate Instagram accounts</strong>Redirect @kathmandugurkhas followers to @ktmgorkhas. One brand, one voice.</div>
+      </div>
+      <div class="action-item">
+        <div class="action-icon">🎬</div>
+        <div class="action-text"><strong>YouTube SEO overhaul</strong>Rename all videos with keyword-rich titles, build playlists, write descriptions targeting Nepali cricket searches.</div>
+      </div>
+      <div class="action-item">
+        <div class="action-icon">📊</div>
+        <div class="action-text"><strong>Analytics baseline</strong>Install Meta Pixel, set up YouTube Studio analytics tracking, document all current follower + engagement benchmarks.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="phase-block">
+    <div class="phase-header">
+      <div class="phase-num">02</div>
+      <div class="phase-info">
+        <h3>Month 1 · Content Engine Launch</h3>
+        <p>Build the systems and content series that will run year-round.</p>
+      </div>
+    </div>
+    <div class="action-list">
+      <div class="action-item">
+        <div class="action-icon">🏏</div>
+        <div class="action-text"><strong>Launch "Gorkhali Stories" series</strong>Weekly YouTube video: player backgrounds, journey narratives, Nepal cricket culture. 5–8 min, bilingual.</div>
+      </div>
+      <div class="action-item">
+        <div class="action-icon">⚡</div>
+        <div class="action-text"><strong>Daily Reels/TikTok calendar</strong>Training clips, throwbacks, polls, challenges. One post per day minimum across IG + TikTok.</div>
+      </div>
+      <div class="action-item">
+        <div class="action-icon">🌟</div>
+        <div class="action-text"><strong>Karan KC content series</strong>Monthly longform video + weekly short-form content built around the marquee player's life and cricket journey.</div>
+      </div>
+      <div class="action-item">
+        <div class="action-icon">🤝</div>
+        <div class="action-text"><strong>Kantipur cross-promo plan</strong>Weekly feature in Kantipur media ecosystem — online articles, TV spots, FM mentions driving fans to socials.</div>
+      </div>
+      <div class="action-item">
+        <div class="action-icon">👕</div>
+        <div class="action-text"><strong>First merch drop</strong>Limited jersey + cap bundle with a countdown campaign. Create urgency, generate revenue, build fan identity.</div>
+      </div>
+      <div class="action-item">
+        <div class="action-icon">📧</div>
+        <div class="action-text"><strong>Fan list capture</strong>WhatsApp broadcast channel + email list built from website sign-ups. Own the audience, don't just rent it.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="phase-block">
+    <div class="phase-header">
+      <div class="phase-num">03</div>
+      <div class="phase-info">
+        <h3>Month 2–3 · Growth & Community</h3>
+        <p>Deepen engagement, activate the fanbase, and start building toward NPL Season 3 hype.</p>
+      </div>
+    </div>
+    <div class="action-list">
+      <div class="action-item">
+        <div class="action-icon">🏆</div>
+        <div class="action-text"><strong>Fan challenges + UGC</strong>Hashtag campaigns (#AayoGorkhali moments), fan video competitions with merchandise prizes.</div>
+      </div>
+      <div class="action-item">
+        <div class="action-icon">🎙️</div>
+        <div class="action-text"><strong>Player Q&A live sessions</strong>Monthly Instagram Live with a rotating player. Drive fan questions in advance, boost pre-event reach.</div>
+      </div>
+      <div class="action-item">
+        <div class="action-icon">📈</div>
+        <div class="action-text"><strong>Paid amplification</strong>Targeted Facebook + Instagram ads for high-performing organic content. Budget focused on Kathmandu youth 16–32.</div>
+      </div>
+      <div class="action-item">
+        <div class="action-icon">🔗</div>
+        <div class="action-text"><strong>Influencer partnerships</strong>Identify 3–5 Nepali micro-influencers in sports/lifestyle (5K–50K followers). Authentic reach, lower cost than mega-influencers.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ CONTENT CALENDAR ══════════════ -->
+<section class="calendar">
+  <div class="section-label">Section 03 — Content Calendar</div>
+  <div class="section-title">Sample Week:<br>Off-Season Content</div>
+
+  <div class="cal-grid">
+    <div class="cal-day-header">Mon</div>
+    <div class="cal-day-header">Tue</div>
+    <div class="cal-day-header">Wed</div>
+    <div class="cal-day-header">Thu</div>
+    <div class="cal-day-header">Fri</div>
+    <div class="cal-day-header">Sat</div>
+    <div class="cal-day-header">Sun</div>
+
+    <!-- Week row -->
+    <div class="cal-day">
+      <div class="day-num">Day 1</div>
+      <span class="cal-pill pill-ig">IG Reel</span>
+      <span class="cal-pill pill-tt">TikTok</span>
+      <div style="font-size:10px;color:#8B85A0;margin-top:4px;">"Training Monday" — player workout behind-scenes</div>
+    </div>
+    <div class="cal-day">
+      <div class="day-num">Day 2</div>
+      <span class="cal-pill pill-fb">FB Post</span>
+      <span class="cal-pill pill-ig">IG Story</span>
+      <div style="font-size:10px;color:#8B85A0;margin-top:4px;">Fan poll + throwback match photo</div>
+    </div>
+    <div class="cal-day">
+      <div class="day-num">Day 3</div>
+      <span class="cal-pill pill-yt">YouTube</span>
+      <span class="cal-pill pill-ig">IG Reel</span>
+      <div style="font-size:10px;color:#8B85A0;margin-top:4px;">"Gorkhali Stories" episode drops + 60-sec teaser</div>
+    </div>
+    <div class="cal-day">
+      <div class="day-num">Day 4</div>
+      <span class="cal-pill pill-tt">TikTok</span>
+      <div style="font-size:10px;color:#8B85A0;margin-top:4px;">Trending audio + Karan KC challenge</div>
+    </div>
+    <div class="cal-day">
+      <div class="day-num">Day 5</div>
+      <span class="cal-pill pill-all">All Platforms</span>
+      <div style="font-size:10px;color:#8B85A0;margin-top:4px;">"Fan Friday" — feature a fan story, UGC repost</div>
+    </div>
+    <div class="cal-day">
+      <div class="day-num">Day 6</div>
+      <span class="cal-pill pill-ig">IG Carousel</span>
+      <span class="cal-pill pill-fb">FB</span>
+      <div style="font-size:10px;color:#8B85A0;margin-top:4px;">Stat graphic: team record or Karan KC milestone</div>
+    </div>
+    <div class="cal-day">
+      <div class="day-num">Day 7</div>
+      <span class="cal-pill pill-ig">IG Live</span>
+      <div style="font-size:10px;color:#8B85A0;margin-top:4px;">Monthly player Q&A (bi-weekly during off-season)</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ ON vs OFF SEASON ══════════════ -->
+<section class="seasons">
+  <div class="section-label">Section 04 — Season Strategy</div>
+  <div class="section-title">On-Season vs<br>Off-Season Plan</div>
+
+  <div class="two-col">
+    <div class="season-card on-season">
+      <h3>On-Season</h3>
+      <div class="period">November — December · NPL Active</div>
+      <div class="content-type-row">
+        <div class="ct-item">
+          <div class="ct-icon ct-gold">⚡</div>
+          <div class="ct-text">
+            <strong>Match-day content blitz</strong>
+            <div class="ct-sub">Pre-match hype, live story updates, post-match celebration/recap reels within 1 hour of stumps</div>
+          </div>
+        </div>
+        <div class="ct-item">
+          <div class="ct-icon ct-gold">🎙️</div>
+          <div class="ct-text">
+            <strong>Happy Dressing Room series</strong>
+            <div class="ct-sub">Continue + expand with better production. Sponsor integration (WorldLink, etc.) into every episode</div>
+          </div>
+        </div>
+        <div class="ct-item">
+          <div class="ct-icon ct-gold">📺</div>
+          <div class="ct-text">
+            <strong>YouTube match highlights</strong>
+            <div class="ct-sub">Posted within 2 hours. SEO-titled. Shorts cut from highlights for 48-hour viral window</div>
+          </div>
+        </div>
+        <div class="ct-item">
+          <div class="ct-icon ct-gold">👥</div>
+          <div class="ct-text">
+            <strong>Real-time fan engagement</strong>
+            <div class="ct-sub">Monitor comments, DMs, mentions across all platforms during match hours. Respond within 15 min</div>
+          </div>
+        </div>
+        <div class="ct-item">
+          <div class="ct-icon ct-gold">📢</div>
+          <div class="ct-text">
+            <strong>Paid match-day ads</strong>
+            <div class="ct-sub">Boost best organic content same-day. Target 16–32 age bracket in Kathmandu, Lalitpur, Bhaktapur</div>
+          </div>
+        </div>
+        <div class="ct-item">
+          <div class="ct-icon ct-gold">🏆</div>
+          <div class="ct-text">
+            <strong>Fan contests per win</strong>
+            <div class="ct-sub">Every Gorkhas win triggers a fan contest. Merchandise prize. Keeps fans emotionally invested in results</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="season-card off-season">
+      <h3>Off-Season</h3>
+      <div class="period">January — October · Year-Round Retention</div>
+      <div class="content-type-row">
+        <div class="ct-item">
+          <div class="ct-icon ct-teal">📖</div>
+          <div class="ct-text">
+            <strong>"Gorkhali Stories" YouTube series</strong>
+            <div class="ct-sub">Weekly player documentaries. Build the human story behind the jersey. Nepal cricket culture content</div>
+          </div>
+        </div>
+        <div class="ct-item">
+          <div class="ct-icon ct-teal">💪</div>
+          <div class="ct-text">
+            <strong>Training & fitness content</strong>
+            <div class="ct-sub">Behind-the-scenes gym sessions, fitness challenges, players teaching skills. High rewatch value</div>
+          </div>
+        </div>
+        <div class="ct-item">
+          <div class="ct-icon ct-teal">🎯</div>
+          <div class="ct-text">
+            <strong>Monthly fan competitions</strong>
+            <div class="ct-sub">Prediction games, trivia, fan art features. Keep the community active with low-cost, high-engagement formats</div>
+          </div>
+        </div>
+        <div class="ct-item">
+          <div class="ct-icon ct-teal">🛒</div>
+          <div class="ct-text">
+            <strong>Merch launches & drops</strong>
+            <div class="ct-sub">Quarterly limited edition drops with countdown campaigns. Revenue + organic buzz</div>
+          </div>
+        </div>
+        <div class="ct-item">
+          <div class="ct-icon ct-teal">🤝</div>
+          <div class="ct-text">
+            <strong>Community partnerships</strong>
+            <div class="ct-sub">Local school cricket events, grassroots cricket coverage. Build the Gorkhas name at community level</div>
+          </div>
+        </div>
+        <div class="ct-item">
+          <div class="ct-icon ct-teal">🔔</div>
+          <div class="ct-text">
+            <strong>Season 3 hype build</strong>
+            <div class="ct-sub">Start teasing NPL Season 3 from September onwards. Countdown content, player return announcements, fan expectations</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ KPIs ══════════════ -->
+<section class="kpis">
+  <div class="section-label">Section 05 — Targets & KPIs</div>
+  <div class="section-title">How I Will Measure<br>Success</div>
+
+  <table class="kpi-table">
+    <thead>
+      <tr>
+        <th>Metric</th>
+        <th>Current</th>
+        <th>3-Month Target</th>
+        <th>12-Month Target</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Instagram Followers</td>
+        <td>11,000</td>
+        <td>18,000</td>
+        <td>40,000+</td>
+        <td><span class="kpi-tag kpi-watch">Priority</span></td>
+      </tr>
+      <tr>
+        <td>TikTok Followers</td>
+        <td>~9,300</td>
+        <td>20,000</td>
+        <td>50,000+</td>
+        <td><span class="kpi-tag kpi-watch">Priority</span></td>
+      </tr>
+      <tr>
+        <td>YouTube Subscribers</td>
+        <td>Unknown / Low</td>
+        <td>5,000</td>
+        <td>25,000+</td>
+        <td><span class="kpi-tag kpi-watch">Build</span></td>
+      </tr>
+      <tr>
+        <td>Website Monthly Visitors</td>
+        <td>0 (inactive)</td>
+        <td>5,000</td>
+        <td>20,000+</td>
+        <td><span class="kpi-tag kpi-watch">Launch</span></td>
+      </tr>
+      <tr>
+        <td>Instagram Engagement Rate</td>
+        <td>Est. 2–3%</td>
+        <td>5%+</td>
+        <td>6%+</td>
+        <td><span class="kpi-tag kpi-watch">Improve</span></td>
+      </tr>
+      <tr>
+        <td>Merch Revenue</td>
+        <td>NPR 0</td>
+        <td>First drop live</td>
+        <td>NPR 5L+ annually</td>
+        <td><span class="kpi-tag kpi-watch">Launch</span></td>
+      </tr>
+      <tr>
+        <td>Fan Email / WhatsApp List</td>
+        <td>0</td>
+        <td>2,000 subscribers</td>
+        <td>10,000+</td>
+        <td><span class="kpi-tag kpi-watch">Build</span></td>
+      </tr>
+      <tr>
+        <td>Become #1 NPL team on IG</td>
+        <td>Rank ~3rd</td>
+        <td>Rank 2nd</td>
+        <td>Rank 1st</td>
+        <td><span class="kpi-tag kpi-win">North Star</span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ══════════════ WHY ME ══════════════ -->
+<section class="why-me">
+  <div class="section-label">Section 06 — Why Parikshit</div>
+  <div class="section-title">The Right Person<br>For This Role</div>
+
+  <div class="skills-grid">
+    <div class="skill-item">
+      <span class="sk-icon">🎮</span>
+      <h4>Sports & Esports Background</h4>
+      <p>3+ years managing HFH Esports — real-time live event engagement, match-day content, community building for a passionate youth fanbase. Cricket and esports share the same audience.</p>
+    </div>
+    <div class="skill-item">
+      <span class="sk-icon">🎬</span>
+      <h4>Content Creation & Video</h4>
+      <p>Hands-on experience producing Reels, Shorts, and short-form video content. Proven ability to adapt to trending formats and create content that performs organically.</p>
+    </div>
+    <div class="skill-item">
+      <span class="sk-icon">🧠</span>
+      <h4>Community Management</h4>
+      <p>Built and managed active communities from scratch. Know how to turn passive followers into loyal fans who advocate for the brand — and how to keep them engaged off-season.</p>
+    </div>
+    <div class="skill-item">
+      <span class="sk-icon">📊</span>
+      <h4>Data-Driven Decisions</h4>
+      <p>Comfortable reading platform analytics, identifying what content works and what doesn't, and adapting strategy based on actual numbers — not guesswork.</p>
+    </div>
+    <div class="skill-item">
+      <span class="sk-icon">🇳🇵</span>
+      <h4>Bilingual: Nepali + English</h4>
+      <p>Natively understand the Nepali audience — the cultural references, the humor, the emotional triggers that make content land. Can write effectively in both languages.</p>
+    </div>
+    <div class="skill-item">
+      <span class="sk-icon">⚡</span>
+      <h4>Available from Day 1</h4>
+      <p>No notice period. No delays. I can start immediately and have the first emergency fixes implemented within the first two weeks of joining.</p>
+    </div>
+  </div>
+
+  <div class="divider-line"></div>
+
+  <div style="background:rgba(255,255,255,0.04);padding:32px;border-radius:4px;border-left:3px solid var(--gold);">
+    <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;color:var(--gold);margin-bottom:16px;">FROM MY EXPERIENCE AT HFH ESPORTS</div>
+    <p style="font-size:15px;line-height:1.8;color:rgba(255,255,255,0.75);max-width:680px;">
+      "I managed live audience engagement during esports tournaments — real-time, fast-paced, high-pressure environments where content decisions had to be made in seconds. A cricket match is the same energy. I have been in that room. I know what it takes to keep a fanbase buzzing when the stakes are high — and to keep them coming back when the season is over."
+    </p>
+    <div style="margin-top:20px;font-size:13px;color:var(--muted);">— Parikshit Bhandari, Social Media Manager, HFH Esports (2022–2025)</div>
+  </div>
+</section>
+
+<!-- ══════════════ CTA ══════════════ -->
+<div class="cta-section">
+  <h2>Let's Build Something<br>The NPL Has Never Seen</h2>
+  <p>I am ready to start on Day 1. The strategy is already written. The gaps are already mapped. All that is missing is the green light.</p>
+  <div class="contact-pills">
+    <div class="contact-pill">📞 +977 9841359483</div>
+    <div class="contact-pill">📧 parikshitbhandari199@gmail.com</div>
+    <div class="contact-pill">📍 Kathmandu, Nepal</div>
+  </div>
+</div>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer>
+  <div class="foot-left">PARIKSHIT BHANDARI · DIGITAL MARKETING SPECIALIST · 2026</div>
+  <div class="foot-right">#AAYOGORKHALI</div>
+</footer>
+
+</body>
+</html>
